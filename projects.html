@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-error": "var(--color-on-error)",
+                    "on-primary-fixed": "#1e1b4b",
+                    "background": "var(--color-background)",
+                    "surface-container-high": "var(--color-surface-container-high)",
+                    "on-primary-fixed-variant": "#4338ca",
+                    "primary-fixed": "#e0e2ff",
+                    "tertiary-fixed-dim": "#c4b5fd",
+                    "on-secondary-fixed": "#1a1b26",
+                    "inverse-surface": "var(--color-inverse-surface)",
+                    "inverse-on-surface": "var(--color-inverse-on-surface)",
+                    "secondary-fixed": "#d8dae6",
+                    "primary-container": "var(--color-primary-container)",
+                    "on-surface": "var(--color-on-surface)",
+                    "surface-container": "var(--color-surface-container)",
+                    "on-tertiary": "var(--color-on-tertiary)",
+                    "on-background": "var(--color-on-background)",
+                    "inverse-primary": "var(--color-inverse-primary)",
+                    "surface-tint": "var(--color-surface-tint)",
+                    "on-secondary-fixed-variant": "#404252",
+                    "on-error-container": "var(--color-on-error-container)",
+                    "on-surface-variant": "var(--color-on-surface-variant)",
+                    "secondary-fixed-dim": "#b8baca",
+                    "outline": "var(--color-outline)",
+                    "tertiary-container": "var(--color-tertiary-container)",
+                    "surface-dim": "var(--color-surface-dim)",
+                    "on-secondary-container": "var(--color-on-secondary-container)",
+                    "error": "var(--color-error)",
+                    "primary": "var(--color-primary)",
+                    "outline-variant": "var(--color-outline-variant)",
+                    "on-secondary": "var(--color-on-secondary)",
+                    "on-primary": "var(--color-on-primary)",
+                    "secondary": "var(--color-secondary)",
+                    "surface-variant": "var(--color-surface-variant)",
+                    "surface-container-low": "var(--color-surface-container-low)",
+                    "error-container": "var(--color-error-container)",
+                    "surface": "var(--color-surface)",
+                    "surface-bright": "var(--color-surface-bright)",
+                    "on-tertiary-container": "var(--color-on-tertiary-container)",
+                    "secondary-container": "var(--color-secondary-container)",
+                    "surface-container-lowest": "var(--color-surface-container-lowest)",
+                    "surface-container-highest": "var(--color-surface-container-highest)",
+                    "on-tertiary-fixed-variant": "#5b21b6",
+                    "tertiary-fixed": "#ede9fe",
+                    "primary-fixed-dim": "#a5b4fc",
+                    "on-tertiary-fixed": "#2e1065",
+                    "on-primary-container": "var(--color-on-primary-container)",
+                    "tertiary": "var(--color-tertiary)"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.5rem",
+                    "lg": "1rem",
+                    "xl": "1.5rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "display": ["Plus Jakarta Sans"],
+                    "body": ["Plus Jakarta Sans"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        body {
+            background-color: #e8eaf0;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .neomorph-raised {
+            box-shadow: 6px 6px 12px rgba(0,0,0,0.08), -6px -6px 12px rgba(255,255,255,0.6);
+        }
+        .neomorph-inset {
+            box-shadow: inset 4px 4px 8px rgba(0,0,0,0.06), inset -4px -4px 8px rgba(255,255,255,0.5);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- TopAppBar -->
+<header class="bg-[#e8eaf0] docked full-width top-0 sticky z-50 px-6 py-4 shadow-[6px_6px_12px_rgba(0,0,0,0.08),-6px_-6px_12px_rgba(255,255,255,0.6)]">
+<div class="flex justify-between items-center max-w-7xl mx-auto w-full">
+<div class="text-xl font-semibold text-slate-800 tracking-tighter">
+                SecEngineer.io
+            </div>
+<nav class="hidden md:flex items-center gap-2 font-plus-jakarta text-sm font-medium tracking-tight">
+<a class="text-slate-600 hover:text-indigo-500 hover:shadow-[inset_4px_4px_8px_rgba(0,0,0,0.06),inset_-4px_-4px_8px_rgba(255,255,255,0.5)] transition-all duration-300 px-4 py-2 rounded-xl" href="/">Home</a>
+<a class="text-slate-600 hover:text-indigo-500 hover:shadow-[inset_4px_4px_8px_rgba(0,0,0,0.06),inset_-4px_-4px_8px_rgba(255,255,255,0.5)] transition-all duration-300 px-4 py-2 rounded-xl" href="/about.html">About</a>
+<a class="text-indigo-600 font-semibold shadow-[inset_4px_4px_8px_rgba(0,0,0,0.06),inset_-4px_-4px_8px_rgba(255,255,255,0.5)] px-4 py-2 rounded-xl" href="/projects.html">Projects</a>
+<a class="text-slate-600 hover:text-indigo-500 hover:shadow-[inset_4px_4px_8px_rgba(0,0,0,0.06),inset_-4px_-4px_8px_rgba(255,255,255,0.5)] transition-all duration-300 px-4 py-2 rounded-xl" href="/blog.html">Blog</a>
+<a class="text-slate-600 hover:text-indigo-500 hover:shadow-[inset_4px_4px_8px_rgba(0,0,0,0.06),inset_-4px_-4px_8px_rgba(255,255,255,0.5)] transition-all duration-300 px-4 py-2 rounded-xl" href="/contact.html">Contact</a>
+</nav>
+<div class="flex items-center gap-4"><button class="w-10 h-10 flex items-center justify-center neomorph-raised rounded-xl text-indigo-600 active:scale-95 transition-transform duration-200" id="theme-toggle">
+<span class="material-symbols-outlined dark:hidden">dark_mode</span>
+<span class="material-symbols-outlined hidden dark:block">light_mode</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center neomorph-raised rounded-xl text-indigo-600 active:scale-95 transition-transform duration-200">
+<span class="material-symbols-outlined">shield_lock</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center neomorph-raised rounded-xl text-indigo-600 active:scale-95 transition-transform duration-200">
+<span class="material-symbols-outlined">terminal</span>
+</button>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-6 pt-12 pb-32">
+<!-- Hero Intro -->
+<div class="mb-16 text-center">
+<h1 class="text-4xl md:text-5xl font-bold text-on-surface tracking-tight mb-4">Security Portfolio</h1>
+<p class="text-on-surface-variant max-w-2xl mx-auto text-lg">
+                Showcasing deep technical expertise in defensive and offensive security operations across distributed architectures.
+            </p>
+</div>
+<!-- Projects Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Project Card 1: Large Featured -->
+<div class="md:col-span-8 neomorph-raised rounded-xl p-8 flex flex-col md:flex-row gap-8 bg-surface">
+<div class="md:w-1/2">
+<div class="neomorph-inset rounded-lg overflow-hidden aspect-video relative group">
+<img alt="Server room visualization" class="w-full h-full object-cover mix-blend-overlay opacity-80" data-alt="abstract close-up of server racks with blue and indigo glowing lights in a dark data center environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYcDtvHOYpwB6Jkw_3P5VpoLZ-Gil9fzbT2LHrgVVYj2ioDZBU1b5DSxjy8g-_OG3PiZAfu1Ddd5WGYRzah8WavU09T4svaH-FNV89BYoAE1cE6f43U1q7USkI6vXlqpf1VUagdagojPHLkEPPFAKz45vH47SzuowprvqTWdWk1KzqLQVjMzL1l_ERZXHFov0XmqBd_csphb_-WEydTGY7SugQn5Qmfl9NI1FpNfMWNNfMpzbV_Y2TfV7eE8aNBi_jwIMeFVDbsu1s"/>
+<div class="absolute inset-0 bg-primary/10"></div>
+</div>
+</div>
+<div class="md:w-1/2 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">cloud_done</span>
+<span class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Infrastructure</span>
+</div>
+<h3 class="text-2xl font-semibold text-on-surface mb-3">Cloud Infrastructure Hardening</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6">
+                            Architected a Zero-Trust environment for a multi-region Kubernetes cluster, implementing strictly defined service mesh policies and automated IAM rotation.
+                        </p>
+</div>
+<button class="neomorph-raised px-6 py-3 rounded-xl text-primary font-semibold flex items-center justify-center gap-2 self-start active:neomorph-inset transition-all duration-200">
+                        Case Study <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Project Card 2: Medium -->
+<div class="md:col-span-4 neomorph-raised rounded-xl p-6 bg-surface flex flex-col">
+<div class="neomorph-inset rounded-lg p-4 mb-6 flex justify-center">
+<span class="material-symbols-outlined text-5xl text-tertiary" style="font-variation-settings: 'FILL' 1;">api</span>
+</div>
+<h3 class="text-xl font-semibold text-on-surface mb-2">API Vulnerability Assessment</h3>
+<p class="text-on-surface-variant text-sm mb-6 flex-grow">
+                    Full-scale penetration testing of RESTful endpoints, uncovering BOLA vulnerabilities and implementing JWT hardening.
+                </p>
+<button class="neomorph-raised w-full py-3 rounded-xl text-primary font-semibold active:neomorph-inset transition-all duration-200">
+                    Case Study
+                </button>
+</div>
+<!-- Project Card 3: Small Square -->
+<div class="md:col-span-4 neomorph-raised rounded-xl p-6 bg-surface flex flex-col">
+<div class="neomorph-inset w-12 h-12 rounded-xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary">security_update_good</span>
+</div>
+<h3 class="text-lg font-semibold text-on-surface mb-2">SecDevOps Pipeline</h3>
+<p class="text-on-surface-variant text-sm mb-6">
+                    Integrated SAST, DAST, and secret scanning into GitHub Actions.
+                </p>
+<button class="neomorph-raised px-4 py-2 rounded-lg text-primary text-sm font-semibold self-start active:neomorph-inset transition-all">
+                    View Repo
+                </button>
+</div>
+<!-- Project Card 4: Horizontal Wide -->
+<div class="md:col-span-8 neomorph-raised rounded-xl p-6 bg-surface flex items-center gap-6">
+<div class="hidden sm:block w-24 h-24 neomorph-inset rounded-full flex-shrink-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-4xl text-on-surface-variant">fingerprint</span>
+</div>
+<div class="flex-grow">
+<h3 class="text-xl font-semibold text-on-surface mb-1">Identity &amp; Access Governance</h3>
+<p class="text-on-surface-variant text-sm mb-3">
+                        Deployment of enterprise-wide SSO with biometric MFA and conditional access.
+                    </p>
+<div class="flex gap-2">
+<span class="px-2 py-1 bg-surface-container rounded-md text-[10px] font-bold text-on-surface-variant">OKTA</span>
+<span class="px-2 py-1 bg-surface-container rounded-md text-[10px] font-bold text-on-surface-variant">SAML</span>
+</div>
+</div>
+<button class="neomorph-raised w-12 h-12 flex items-center justify-center rounded-full text-primary active:neomorph-inset flex-shrink-0">
+<span class="material-symbols-outlined">open_in_new</span>
+</button>
+</div>
+<!-- Project Card 5: Small Square -->
+<div class="md:col-span-4 neomorph-raised rounded-xl p-6 bg-surface flex flex-col">
+<div class="neomorph-inset w-12 h-12 rounded-xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-tertiary">policy</span>
+</div>
+<h3 class="text-lg font-semibold text-on-surface mb-2">Compliance Automation</h3>
+<p class="text-on-surface-variant text-sm mb-6">
+                    Automated SOC2 audit evidence collection using serverless functions.
+                </p>
+<button class="neomorph-raised px-4 py-2 rounded-lg text-primary text-sm font-semibold self-start active:neomorph-inset transition-all">
+                    Case Study
+                </button>
+</div>
+<!-- Project Card 6: Small Square -->
+<div class="md:col-span-4 neomorph-raised rounded-xl p-6 bg-surface flex flex-col">
+<div class="neomorph-inset w-12 h-12 rounded-xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary">bug_report</span>
+</div>
+<h3 class="text-lg font-semibold text-on-surface mb-2">Threat Modeling</h3>
+<p class="text-on-surface-variant text-sm mb-6">
+                    STRIDE-based analysis for decentralized finance (DeFi) protocols.
+                </p>
+<button class="neomorph-raised px-4 py-2 rounded-lg text-primary text-sm font-semibold self-start active:neomorph-inset transition-all">
+                    Case Study
+                </button>
+</div>
+<!-- Project Card 7: Small Square -->
+<div class="md:col-span-4 neomorph-raised rounded-xl p-6 bg-surface flex flex-col">
+<div class="neomorph-inset w-12 h-12 rounded-xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-on-surface">monitoring</span>
+</div>
+<h3 class="text-lg font-semibold text-on-surface mb-2">SIEM Orchestration</h3>
+<p class="text-on-surface-variant text-sm mb-6">
+                    Custom SOAR playbooks for automated ransomware containment.
+                </p>
+<button class="neomorph-raised px-4 py-2 rounded-lg text-primary text-sm font-semibold self-start active:neomorph-inset transition-all">
+                    Case Study
+                </button>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-3 bg-[#e8eaf0] z-50 rounded-t-[32px] shadow-[0_-8px_16px_rgba(0,0,0,0.05)]">
+<div class="flex flex-col items-center justify-center text-slate-500 w-16 h-16 hover:text-indigo-500">
+<span class="material-symbols-outlined">home</span>
+<span class="font-plus-jakarta text-[10px] font-medium">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 w-16 h-16 hover:text-indigo-500">
+<span class="material-symbols-outlined">person_search</span>
+<span class="font-plus-jakarta text-[10px] font-medium">About</span>
+</div>
+<div class="flex flex-col items-center justify-center text-indigo-600 shadow-[inset_4px_4px_8px_rgba(0,0,0,0.06),inset_-4px_-4px_8px_rgba(255,255,255,0.5)] rounded-2xl w-16 h-16">
+<span class="material-symbols-outlined">shield</span>
+<span class="font-plus-jakarta text-[10px] font-medium">Work</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 w-16 h-16 hover:text-indigo-500">
+<span class="material-symbols-outlined">history_edu</span>
+<span class="font-plus-jakarta text-[10px] font-medium">Insights</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 w-16 h-16 hover:text-indigo-500">
+<span class="material-symbols-outlined">alternate_email</span>
+<span class="font-plus-jakarta text-[10px] font-medium">Contact</span>
+</div>
+</nav>
+<script>
+  const themeToggle = document.getElementById('theme-toggle');
+  const htmlElement = document.documentElement;
+
+  themeToggle.addEventListener('click', () => {
+    if (htmlElement.classList.contains('dark')) {
+      htmlElement.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+    } else {
+      htmlElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+    }
+  });
+
+  // Check for saved theme preference
+  if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    htmlElement.classList.add('dark');
+  } else {
+    htmlElement.classList.remove('dark');
+  }
+</script><script type="module" src="/main.js"></script>
+</body></html>

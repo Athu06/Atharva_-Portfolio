@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SecEngineer.io — Security Insights</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-error": "var(--color-on-error)",
+            "on-primary-fixed": "#1e1b4b",
+            "background": "var(--color-background)",
+            "surface-container-high": "var(--color-surface-container-high)",
+            "on-primary-fixed-variant": "#4338ca",
+            "primary-fixed": "#e0e2ff",
+            "tertiary-fixed-dim": "#c4b5fd",
+            "on-secondary-fixed": "#1a1b26",
+            "inverse-surface": "var(--color-inverse-surface)",
+            "inverse-on-surface": "var(--color-inverse-on-surface)",
+            "secondary-fixed": "#d8dae6",
+            "primary-container": "var(--color-primary-container)",
+            "on-surface": "var(--color-on-surface)",
+            "surface-container": "var(--color-surface-container)",
+            "on-tertiary": "var(--color-on-tertiary)",
+            "on-background": "var(--color-on-background)",
+            "inverse-primary": "var(--color-inverse-primary)",
+            "surface-tint": "var(--color-surface-tint)",
+            "on-secondary-fixed-variant": "#404252",
+            "on-error-container": "var(--color-on-error-container)",
+            "on-surface-variant": "var(--color-on-surface-variant)",
+            "secondary-fixed-dim": "#b8baca",
+            "outline": "var(--color-outline)",
+            "tertiary-container": "var(--color-tertiary-container)",
+            "surface-dim": "var(--color-surface-dim)",
+            "on-secondary-container": "var(--color-on-secondary-container)",
+            "error": "var(--color-error)",
+            "primary": "var(--color-primary)",
+            "outline-variant": "var(--color-outline-variant)",
+            "on-secondary": "var(--color-on-secondary)",
+            "on-primary": "var(--color-on-primary)",
+            "secondary": "var(--color-secondary)",
+            "surface-variant": "var(--color-surface-variant)",
+            "surface-container-low": "var(--color-surface-container-low)",
+            "error-container": "var(--color-error-container)",
+            "surface": "var(--color-surface)",
+            "surface-bright": "var(--color-surface-bright)",
+            "on-tertiary-container": "var(--color-on-tertiary-container)",
+            "secondary-container": "var(--color-secondary-container)",
+            "surface-container-lowest": "var(--color-surface-container-lowest)",
+            "surface-container-highest": "var(--color-surface-container-highest)",
+            "on-tertiary-fixed-variant": "#5b21b6",
+            "tertiary-fixed": "#ede9fe",
+            "primary-fixed-dim": "#a5b4fc",
+            "on-tertiary-fixed": "#2e1065",
+            "on-primary-container": "var(--color-on-primary-container)",
+            "tertiary": "var(--color-tertiary)"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.5rem",
+            "lg": "1rem",
+            "xl": "1.5rem",
+            "full": "9999px"
+          },
+          "fontFamily": {
+            "headline": ["Plus Jakarta Sans"],
+            "display": ["Plus Jakarta Sans"],
+            "body": ["Plus Jakarta Sans"],
+            "label": ["Plus Jakarta Sans"]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    body {
+      background-color: #e8eaf0;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .neomorph-raised {
+      box-shadow: 6px 6px 12px rgba(0,0,0,0.08), -6px -6px 12px rgba(255,255,255,0.6);
+    }
+    .neomorph-inset {
+      box-shadow: inset 4px 4px 8px rgba(0,0,0,0.06), inset -4px -4px 8px rgba(255,255,255,0.5);
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen pb-32 md:pb-0">
+<!-- TopAppBar -->
+<header class="bg-[#e8eaf0] dark:bg-slate-900 docked full-width top-0 sticky z-50 px-6 py-4 shadow-[6px_6px_12px_rgba(0,0,0,0.08),-6px_-6px_12px_rgba(255,255,255,0.6)] dark:shadow-none">
+<div class="flex justify-between items-center max-w-7xl mx-auto w-full">
+<div class="text-xl font-semibold text-slate-800 dark:text-slate-100 tracking-tighter">SecEngineer.io</div>
+<!-- Desktop Navigation -->
+<nav class="hidden md:flex items-center gap-8 font-plus-jakarta text-sm font-medium tracking-tight">
+<a class="text-slate-600 dark:text-slate-400 hover:text-indigo-500 hover:shadow-[inset_4px_4px_8px_rgba(0,0,0,0.06),inset_-4px_-4px_8px_rgba(255,255,255,0.5)] transition-all duration-300 px-4 py-2 rounded-xl" href="/">Home</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-indigo-500 hover:shadow-[inset_4px_4px_8px_rgba(0,0,0,0.06),inset_-4px_-4px_8px_rgba(255,255,255,0.5)] transition-all duration-300 px-4 py-2 rounded-xl" href="/about.html">About</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-indigo-500 hover:shadow-[inset_4px_4px_8px_rgba(0,0,0,0.06),inset_-4px_-4px_8px_rgba(255,255,255,0.5)] transition-all duration-300 px-4 py-2 rounded-xl" href="/projects.html">Projects</a>
+<a class="text-indigo-600 dark:text-indigo-400 font-semibold shadow-[inset_4px_4px_8px_rgba(0,0,0,0.06),inset_-4px_-4px_8px_rgba(255,255,255,0.5)] px-4 py-2 rounded-xl" href="/blog.html">Blog</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-indigo-500 hover:shadow-[inset_4px_4px_8px_rgba(0,0,0,0.06),inset_-4px_-4px_8px_rgba(255,255,255,0.5)] transition-all duration-300 px-4 py-2 rounded-xl" href="/contact.html">Contact</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-xl neomorph-raised text-primary hover:scale-95 transition-transform duration-200" id="theme-toggle">
+<span class="material-symbols-outlined dark:hidden" data-icon="dark_mode">dark_mode</span>
+<span class="material-symbols-outlined hidden dark:block" data-icon="light_mode">light_mode</span>
+</button><button class="p-2 rounded-xl neomorph-raised text-primary hover:scale-95 transition-transform duration-200">
+<span class="material-symbols-outlined" data-icon="shield_lock">shield_lock</span>
+</button>
+<button class="p-2 rounded-xl neomorph-raised text-primary hover:scale-95 transition-transform duration-200">
+<span class="material-symbols-outlined" data-icon="terminal">terminal</span>
+</button>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-6 py-12">
+<!-- Hero Section -->
+<section class="mb-16">
+<div class="flex flex-col md:flex-row items-end justify-between gap-8 mb-12">
+<div class="max-w-2xl">
+<h1 class="text-4xl md:text-5xl font-semibold text-on-surface tracking-tight mb-4">Security Insights</h1>
+<p class="text-on-surface-variant text-lg leading-relaxed">Detailed technical analysis, vulnerability research, and architectural patterns for modern cloud security engineering.</p>
+</div>
+<div class="flex gap-4">
+<div class="neomorph-inset p-2 rounded-xl flex items-center gap-2 px-4">
+<span class="material-symbols-outlined text-primary" data-icon="search">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm font-medium w-48" placeholder="Search insights..." type="text"/>
+</div>
+</div>
+</div>
+<!-- Categories -->
+<div class="flex flex-wrap gap-4 mb-12">
+<button class="px-6 py-2 rounded-full neomorph-inset text-primary font-semibold text-sm">All Posts</button>
+<button class="px-6 py-2 rounded-full neomorph-raised text-on-surface-variant hover:text-primary transition-colors text-sm font-medium">Vulnerabilities</button>
+<button class="px-6 py-2 rounded-full neomorph-raised text-on-surface-variant hover:text-primary transition-colors text-sm font-medium">Cloud Security</button>
+<button class="px-6 py-2 rounded-full neomorph-raised text-on-surface-variant hover:text-primary transition-colors text-sm font-medium">DevSecOps</button>
+<button class="px-6 py-2 rounded-full neomorph-raised text-on-surface-variant hover:text-primary transition-colors text-sm font-medium">Cryptography</button>
+</div>
+<!-- Featured Bento Post -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-12">
+<article class="lg:col-span-8 neomorph-raised rounded-3xl overflow-hidden group p-2">
+<div class="flex flex-col md:flex-row h-full">
+<div class="md:w-1/2 overflow-hidden rounded-2xl">
+<img alt="Cybersecurity Matrix" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Abstract digital grid representation with glowing blue neon lines and data nodes on a dark background representing cloud security" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfMRTN1b87Lu8IwliogMLi01cLFB_B6bx9-BHVTo-HC-lfyYNgQ-jTMw4ZjvNCt9vHIbAPuvFF3Zrgbv04rA70NhzdSyWiQ2gw40NAslIlFEjkktz3RBZC7K0PgwYT1FfN8vuvtLS73q5NmNi0LHYsx_CrcIBNKCiXYRgXEFhho5qvkK-nOyHUf1Q8TJxc-YBeMfH3OOYNzs9yzriLF54xJjukCdY3OXyKTAx7HEyPB8piKs-Cy0YGO-q9cg78j3ek8us7-K3LvflR"/>
+</div>
+<div class="md:w-1/2 p-8 flex flex-col justify-center">
+<div class="flex items-center gap-2 text-xs font-semibold text-tertiary mb-4 uppercase tracking-widest">
+<span class="material-symbols-outlined text-[16px]" data-icon="auto_awesome">auto_awesome</span>
+                Featured Insight
+              </div>
+<h2 class="text-2xl font-semibold text-on-surface mb-4 leading-tight">Analyzing Zero-Day Vulnerabilities in modern web frameworks</h2>
+<p class="text-on-surface-variant text-sm mb-6 line-clamp-3">Deep dive into recent RCE findings within popular server-side rendering engines and how to implement proactive mitigation strategies beyond simple patching.</p>
+<div class="flex items-center justify-between mt-auto">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full neomorph-inset p-0.5">
+<img alt="Author" class="w-full h-full rounded-full object-cover" data-alt="Professional headshot of a security engineer with a friendly expression in soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzTJJbbutFfVZTTXZCfbuKwAwgy9LWQ2Xuu2eNEFZh4rLJyzO8h8RG10CeJbenzzzr77dv5XTEIQXuns-I5GN_yM3QZwXwRuJmD_K0f5zsuTeQWTrj8AFroP3lsiO1tRCADNvPmYvfzI7Yy0tanulK2iSpOm932QUM5P6SDTPWGShOTVAdCh3NyqEpUButExzX6HLuIJRC6R3Ahh-3Z_gXTtOdl6yvcAvCJjF0uTtm1gRe5Sdof0Q8ufDztdfeYedKAj5xyOyRg1QB"/>
+</div>
+<span class="text-xs font-medium text-on-surface">Alex River</span>
+</div>
+<div class="flex items-center gap-2 text-xs text-on-surface-variant font-medium neomorph-inset px-3 py-1.5 rounded-lg">
+<span class="material-symbols-outlined text-[14px]" data-icon="schedule">schedule</span>
+                  12 min read
+                </div>
+</div>
+</div>
+</div>
+</article>
+<div class="lg:col-span-4 flex flex-col gap-8">
+<div class="flex-1 neomorph-raised rounded-3xl p-8 flex flex-col justify-center">
+<span class="material-symbols-outlined text-primary mb-4 text-3xl" data-icon="monitoring">monitoring</span>
+<h3 class="text-xl font-semibold mb-2">Weekly Security Pulse</h3>
+<p class="text-sm text-on-surface-variant mb-4">Subscribe to get technical breakdowns of the week's most critical exploits directly in your inbox.</p>
+<div class="neomorph-inset p-1 rounded-xl flex">
+<input class="bg-transparent border-none focus:ring-0 text-sm flex-1 px-3" placeholder="Email" type="email"/>
+<button class="neomorph-raised bg-surface p-2 rounded-lg text-primary">
+<span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="flex-1 neomorph-raised rounded-3xl p-8 bg-indigo-600/5">
+<h3 class="text-xl font-semibold mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="terminal">terminal</span>
+              Quick Labs
+            </h3>
+<div class="space-y-4">
+<div class="flex items-center gap-3 neomorph-inset p-3 rounded-xl cursor-pointer hover:bg-white/40 transition-colors">
+<div class="w-2 h-2 rounded-full bg-green-500"></div>
+<span class="text-xs font-medium">Bypassing JWT verification</span>
+</div>
+<div class="flex items-center gap-3 neomorph-inset p-3 rounded-xl cursor-pointer hover:bg-white/40 transition-colors">
+<div class="w-2 h-2 rounded-full bg-yellow-500"></div>
+<span class="text-xs font-medium">Advanced S3 bucket policies</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Main Feed -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<article class="neomorph-raised rounded-3xl p-4 flex flex-col group">
+<div class="aspect-video rounded-2xl overflow-hidden mb-6">
+<img alt="Servers" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Server racks in a data center illuminated with blue and purple LED lights, creating a high-tech atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3__mYPD-F2tk6mMoZd5ZroTqUD4Axv6FrZ4RlmlOFaz-ELlRho8SOOXOz-7c0Kj8j7H2opf6nmJu1ZaBpu2uOaw-mx18hlsAvl08VoHY-q_0eLYZXFvVNGK-mq_j9qB2g_BXMXw7iHqhHKqeKh_aLjXoJC7K50toAJNOJ_NlptTaPJdFT770ppMVO_H2FQLCd_E87I0Lw91WNV3rLay3vJQtfTm-jizFv2d3RT0VDzfEOJyiIUUjysMdCRuEgRyYqm3TGpBvt6kK6"/>
+</div>
+<div class="px-2 pb-2 flex-1 flex flex-col">
+<div class="flex items-center justify-between mb-3">
+<span class="text-[10px] font-bold text-indigo-500 bg-indigo-50 px-2 py-1 rounded-md">CLOUD SECURITY</span>
+<span class="text-[10px] font-medium text-on-surface-variant uppercase tracking-tight">March 15, 2024</span>
+</div>
+<h3 class="text-lg font-semibold mb-3 leading-snug hover:text-primary transition-colors cursor-pointer">Securing Multi-tenant Kubernetes Architectures</h3>
+<p class="text-sm text-on-surface-variant mb-6 flex-1">Implementing NetworkPolicies and OPA Gatekeeper to ensure complete isolation in shared compute environments.</p>
+<div class="flex items-center justify-between pt-4 border-t border-surface-container">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary" data-icon="timer">timer</span>
+<span class="text-xs font-medium text-on-surface-variant">8 min read</span>
+</div>
+<button class="neomorph-raised p-2 rounded-full text-primary hover:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="bookmark">bookmark</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Card 2 -->
+<article class="neomorph-raised rounded-3xl p-4 flex flex-col group">
+<div class="aspect-video rounded-2xl overflow-hidden mb-6">
+<img alt="Matrix Code" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Green glowing binary code streaming vertically down a black screen, representing software vulnerabilities and code analysis" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1hujU9snFcOVgI8zKLQgTRYzPBNWlHFuymOUuMoSlyZf_9dv9r_uKTcvZS9iCcNgh_XxDb5CX5OaJ03KutN-x05MSM-VXIyHWwTkmrgJ8McfspxcXNrwhdBMaax7M20QcthUGkk9IebmsMiCYXvT2AxziHFvRKdFOdgOleN5cUv99fg7XDZAniCQekxQKwN5y2ociLXtT5fnStbdtP6GwhDIGB3l_rmkvGNl7wp_0lbqF5gxJRqK-gDnUxCTc0lZy5GqQnmbS4iWa"/>
+</div>
+<div class="px-2 pb-2 flex-1 flex flex-col">
+<div class="flex items-center justify-between mb-3">
+<span class="text-[10px] font-bold text-tertiary bg-violet-50 px-2 py-1 rounded-md">VULNERABILITIES</span>
+<span class="text-[10px] font-medium text-on-surface-variant uppercase tracking-tight">March 12, 2024</span>
+</div>
+<h3 class="text-lg font-semibold mb-3 leading-snug hover:text-primary transition-colors cursor-pointer">The hidden dangers of supply chain attacks in NPM</h3>
+<p class="text-sm text-on-surface-variant mb-6 flex-1">Case study of dependency confusion and malicious post-install scripts discovered in common enterprise tools.</p>
+<div class="flex items-center justify-between pt-4 border-t border-surface-container">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary" data-icon="timer">timer</span>
+<span class="text-xs font-medium text-on-surface-variant">15 min read</span>
+</div>
+<button class="neomorph-raised p-2 rounded-full text-primary hover:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="bookmark">bookmark</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Card 3 -->
+<article class="neomorph-raised rounded-3xl p-4 flex flex-col group">
+<div class="aspect-video rounded-2xl overflow-hidden mb-6">
+<img alt="Lock" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Close-up of a modern biometric fingerprint scanner with a glowing blue circular light indicating a secure login process" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDz7ZQk03qq5KtzDfWPvtdJAGQwDRbS7foQ15KJwR4OjUDFP64O-J3UANPLIG-U3uvKwraVTDHF8RuU-8qfOxSSTHrk8Z6p0_L_2Jf_y-mSN08of8_SIAs4WqEiOZLhIxszuUzUTuRXj-EBGQp0TuN6g71a3xLCSlmh_05CF09zioYxI8tH9HjJrKPx21l2FYlqURxw5U4SULr5NYQprs6wn4Aph4DPdeFWFr7vggXLJNzxPvpUMKNYX8Aiid1zazCd9WRXPa4h-AYv"/>
+</div>
+<div class="px-2 pb-2 flex-1 flex flex-col">
+<div class="flex items-center justify-between mb-3">
+<span class="text-[10px] font-bold text-primary bg-indigo-50 px-2 py-1 rounded-md">IAM &amp; AUTH</span>
+<span class="text-[10px] font-medium text-on-surface-variant uppercase tracking-tight">March 08, 2024</span>
+</div>
+<h3 class="text-lg font-semibold mb-3 leading-snug hover:text-primary transition-colors cursor-pointer">Moving beyond passwords with Passkeys and WebAuthn</h3>
+<p class="text-sm text-on-surface-variant mb-6 flex-1">Implementation guide for passwordless authentication flows in high-security financial applications.</p>
+<div class="flex items-center justify-between pt-4 border-t border-surface-container">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary" data-icon="timer">timer</span>
+<span class="text-xs font-medium text-on-surface-variant">10 min read</span>
+</div>
+<button class="neomorph-raised p-2 rounded-full text-primary hover:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="bookmark">bookmark</span>
+</button>
+</div>
+</div>
+</article>
+</div>
+<!-- Pagination -->
+<div class="mt-16 flex justify-center items-center gap-4">
+<button class="neomorph-raised w-10 h-10 flex items-center justify-center rounded-xl text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="chevron_left">chevron_left</span>
+</button>
+<div class="flex items-center gap-2 px-6 py-2 rounded-2xl neomorph-inset">
+<span class="w-8 h-8 flex items-center justify-center rounded-lg bg-primary text-white font-bold text-sm">1</span>
+<span class="w-8 h-8 flex items-center justify-center rounded-lg text-on-surface-variant font-bold text-sm hover:bg-surface-container transition-colors cursor-pointer">2</span>
+<span class="w-8 h-8 flex items-center justify-center rounded-lg text-on-surface-variant font-bold text-sm hover:bg-surface-container transition-colors cursor-pointer">3</span>
+</div>
+<button class="neomorph-raised w-10 h-10 flex items-center justify-center rounded-xl text-primary">
+<span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile only) -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-3 bg-[#e8eaf0] dark:bg-slate-900 md:hidden z-50 rounded-t-[32px] shadow-[0_-8px_16px_rgba(0,0,0,0.05)]">
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 w-16 h-16 hover:text-indigo-500 transition-colors" href="/">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-plus-jakarta text-[10px] font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 w-16 h-16 hover:text-indigo-500 transition-colors" href="/about.html">
+<span class="material-symbols-outlined" data-icon="person_search">person_search</span>
+<span class="font-plus-jakarta text-[10px] font-medium">About</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 w-16 h-16 hover:text-indigo-500 transition-colors" href="/projects.html">
+<span class="material-symbols-outlined" data-icon="shield">shield</span>
+<span class="font-plus-jakarta text-[10px] font-medium">Work</span>
+</a>
+<a class="flex flex-col items-center justify-center text-indigo-600 dark:text-indigo-400 shadow-[inset_4px_4px_8px_rgba(0,0,0,0.06),inset_-4px_-4px_8px_rgba(255,255,255,0.5)] rounded-2xl w-16 h-16" href="/blog.html">
+<span class="material-symbols-outlined" data-icon="history_edu" style="font-variation-settings: 'FILL' 1;">history_edu</span>
+<span class="font-plus-jakarta text-[10px] font-medium">Insights</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 w-16 h-16 hover:text-indigo-500 transition-colors" href="/contact.html">
+<span class="material-symbols-outlined" data-icon="alternate_email">alternate_email</span>
+<span class="font-plus-jakarta text-[10px] font-medium">Contact</span>
+</a>
+</nav>
+<script>
+  const themeToggle = document.getElementById('theme-toggle');
+  const htmlElement = document.documentElement;
+
+  themeToggle.addEventListener('click', () => {
+    if (htmlElement.classList.contains('dark')) {
+      htmlElement.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+    } else {
+      htmlElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+    }
+  });
+
+  // Check for saved theme preference
+  if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    htmlElement.classList.add('dark');
+  } else {
+    htmlElement.classList.remove('dark');
+  }
+</script><script type="module" src="/main.js"></script>
+</body></html>

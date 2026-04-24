@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Colors - Light Mode */
+  --color-primary: #6366f1;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #818cf8;
+  --color-on-primary-container: #e0e2ff;
+  --color-secondary: #6c6e7e;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #d8dae6;
+  --color-on-secondary-container: #585a68;
+  --color-tertiary: #7c3aed;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #a78bfa;
+  --color-on-tertiary-container: #3b1f63;
+  --color-error: #dc2626;
+  --color-on-error: #ffffff;
+  --color-error-container: #fee2e2;
+  --color-on-error-container: #991b1b;
+  --color-background: #e8eaf0;
+  --color-on-background: #2e3040;
+  --color-surface: #e8eaf0;
+  --color-surface-bright: #edeef4;
+  --color-surface-container: #e2e4ea;
+  --color-surface-container-high: #dcdee4;
+  --color-surface-container-highest: #d6d8de;
+  --color-surface-container-low: #e5e7ed;
+  --color-surface-container-lowest: #f0f2f8;
+  --color-surface-dim: #d4d6dc;
+  --color-surface-tint: #6366f1;
+  --color-surface-variant: #dcdee4;
+  --color-on-surface: #2e3040;
+  --color-on-surface-variant: #585a68;
+  --color-outline: #8a8c9a;
+  --color-outline-variant: #d0d2dc;
+  
+  --color-inverse-surface: #2e3040;
+  --color-inverse-on-surface: #e8eaf0;
+  --color-inverse-primary: #a5b4fc;
+  
+  --shadow-raised: 6px 6px 12px rgba(0,0,0,0.08), -6px -6px 12px rgba(255,255,255,0.6);
+  --shadow-pressed: inset 4px 4px 8px rgba(0,0,0,0.06), inset -4px -4px 8px rgba(255,255,255,0.5);
+
+  --font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+html.dark {
+  /* Colors - Dark Mode */
+  --color-background: #0f111a;
+  --color-surface: #141722;
+  --color-surface-bright: #1c1f2e;
+  --color-surface-container: #10121c;
+  --color-surface-container-high: #12141f;
+  --color-surface-container-highest: #151825;
+  --color-surface-container-low: #0c0e14;
+  --color-surface-container-lowest: #08090d;
+  --color-surface-dim: #0a0b10;
+  --color-surface-variant: #1e2233;
+  
+  --color-on-background: #e2e8f0;
+  --color-on-surface: #e2e8f0;
+  --color-on-surface-variant: #94a3b8;
+  --color-outline: #475569;
+  --color-outline-variant: #334155;
+
+  --color-inverse-surface: #e2e8f0;
+  --color-inverse-on-surface: #0f111a;
+  
+  --shadow-raised: 6px 6px 12px rgba(0,0,0,0.4), -6px -6px 12px rgba(255,255,255,0.05);
+  --shadow-pressed: inset 4px 4px 8px rgba(0,0,0,0.4), inset -4px -4px 8px rgba(255,255,255,0.05);
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  background-color: var(--color-background);
+  color: var(--color-on-background);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  color: var(--color-on-surface);
+  margin-top: 0;
+}
+
+p {
+  color: var(--color-on-surface-variant);
+  font-weight: 500;
+}
+
+/* Override hardcoded inline shadows from Tailwind generation */
+.neomorph-raised,
+[class*="shadow-[6px_6px"] {
+    box-shadow: var(--shadow-raised) !important;
+}
+
+.neomorph-inset,
+[class*="shadow-[inset_4px_4px"] {
+    box-shadow: var(--shadow-pressed) !important;
+}
+
+/* The specific inline background colors used in the generated HTML */
+.bg-\\[\\#e8eaf0\\] {
+    background-color: var(--color-surface) !important;
+}
+
+/* Ensure background color transitions smoothly */
+body, div, header, nav, section, main {
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}

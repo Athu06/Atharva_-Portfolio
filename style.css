@@ -102,10 +102,7 @@ p {
     box-shadow: var(--shadow-pressed) !important;
 }
 
-/* The specific inline background colors used in the generated HTML */
-.bg-\\[\\#e8eaf0\\] {
-    background-color: var(--color-surface) !important;
-}
+/* Hardcoded bg-[#e8eaf0] is handled via Tailwind config CSS var override */
 
 /* Ensure background color transitions smoothly */
 body, div, header, nav, section, main {

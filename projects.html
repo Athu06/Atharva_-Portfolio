@@ -1,287 +1,332 @@
 <!DOCTYPE html>
 
-<html class="light" lang="en"><head>
+<html class="dark" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<title>Project Showcase | APPSEC_ENGINEER</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                    "on-error": "var(--color-on-error)",
-                    "on-primary-fixed": "#1e1b4b",
-                    "background": "var(--color-background)",
-                    "surface-container-high": "var(--color-surface-container-high)",
-                    "on-primary-fixed-variant": "#4338ca",
-                    "primary-fixed": "#e0e2ff",
-                    "tertiary-fixed-dim": "#c4b5fd",
-                    "on-secondary-fixed": "#1a1b26",
-                    "inverse-surface": "var(--color-inverse-surface)",
-                    "inverse-on-surface": "var(--color-inverse-on-surface)",
-                    "secondary-fixed": "#d8dae6",
-                    "primary-container": "var(--color-primary-container)",
-                    "on-surface": "var(--color-on-surface)",
-                    "surface-container": "var(--color-surface-container)",
-                    "on-tertiary": "var(--color-on-tertiary)",
-                    "on-background": "var(--color-on-background)",
-                    "inverse-primary": "var(--color-inverse-primary)",
-                    "surface-tint": "var(--color-surface-tint)",
-                    "on-secondary-fixed-variant": "#404252",
-                    "on-error-container": "var(--color-on-error-container)",
-                    "on-surface-variant": "var(--color-on-surface-variant)",
-                    "secondary-fixed-dim": "#b8baca",
-                    "outline": "var(--color-outline)",
-                    "tertiary-container": "var(--color-tertiary-container)",
-                    "surface-dim": "var(--color-surface-dim)",
-                    "on-secondary-container": "var(--color-on-secondary-container)",
-                    "error": "var(--color-error)",
-                    "primary": "var(--color-primary)",
-                    "outline-variant": "var(--color-outline-variant)",
-                    "on-secondary": "var(--color-on-secondary)",
-                    "on-primary": "var(--color-on-primary)",
-                    "secondary": "var(--color-secondary)",
-                    "surface-variant": "var(--color-surface-variant)",
-                    "surface-container-low": "var(--color-surface-container-low)",
-                    "error-container": "var(--color-error-container)",
-                    "surface": "var(--color-surface)",
-                    "surface-bright": "var(--color-surface-bright)",
-                    "on-tertiary-container": "var(--color-on-tertiary-container)",
-                    "secondary-container": "var(--color-secondary-container)",
-                    "surface-container-lowest": "var(--color-surface-container-lowest)",
-                    "surface-container-highest": "var(--color-surface-container-highest)",
-                    "on-tertiary-fixed-variant": "#5b21b6",
-                    "tertiary-fixed": "#ede9fe",
-                    "primary-fixed-dim": "#a5b4fc",
-                    "on-tertiary-fixed": "#2e1065",
-                    "on-primary-container": "var(--color-on-primary-container)",
-                    "tertiary": "var(--color-tertiary)"
-            },
-            "borderRadius": {
-                    "DEFAULT": "0.5rem",
-                    "lg": "1rem",
-                    "xl": "1.5rem",
-                    "full": "9999px"
-            },
-            "fontFamily": {
-                    "headline": ["Plus Jakarta Sans"],
-                    "display": ["Plus Jakarta Sans"],
-                    "body": ["Plus Jakarta Sans"],
-                    "label": ["Plus Jakarta Sans"]
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed": "#2e1065",
+                        "secondary": "var(--color-secondary)",
+                        "on-tertiary-container": "var(--color-on-tertiary-container)",
+                        "on-primary-fixed-variant": "#4338ca",
+                        "surface-bright": "var(--color-surface-bright)",
+                        "on-tertiary-fixed-variant": "#5b21b6",
+                        "on-secondary-fixed-variant": "#404252",
+                        "primary-fixed": "#e0e2ff",
+                        "outline-variant": "var(--color-outline-variant)",
+                        "on-secondary-fixed": "#1a1b26",
+                        "primary": "var(--color-primary)",
+                        "on-secondary-container": "var(--color-on-secondary-container)",
+                        "primary-fixed-dim": "#a5b4fc",
+                        "error-container": "var(--color-error-container)",
+                        "tertiary-fixed-dim": "#c4b5fd",
+                        "secondary-container": "var(--color-secondary-container)",
+                        "on-surface-variant": "var(--color-on-surface-variant)",
+                        "surface-container-highest": "var(--color-surface-container-highest)",
+                        "on-surface": "var(--color-on-surface)",
+                        "on-primary": "var(--color-on-primary)",
+                        "surface-container-lowest": "var(--color-surface-container-lowest)",
+                        "secondary-fixed": "#d8dae6",
+                        "on-primary-fixed": "#1e1b4b",
+                        "surface-container-high": "var(--color-surface-container-high)",
+                        "tertiary-container": "var(--color-tertiary-container)",
+                        "inverse-on-surface": "var(--color-inverse-on-surface)",
+                        "on-tertiary": "var(--color-on-tertiary)",
+                        "background": "var(--color-background)",
+                        "on-background": "var(--color-on-background)",
+                        "on-primary-container": "var(--color-on-primary-container)",
+                        "surface-tint": "var(--color-surface-tint)",
+                        "surface": "var(--color-surface)",
+                        "surface-container": "var(--color-surface-container)",
+                        "primary-container": "var(--color-primary-container)",
+                        "on-error-container": "var(--color-on-error-container)",
+                        "tertiary": "var(--color-tertiary)",
+                        "surface-dim": "var(--color-surface-dim)",
+                        "secondary-fixed-dim": "#b8baca",
+                        "outline": "var(--color-outline)",
+                        "error": "var(--color-error)",
+                        "on-error": "var(--color-on-error)",
+                        "inverse-surface": "var(--color-inverse-surface)",
+                        "surface-variant": "var(--color-surface-variant)",
+                        "surface-container-low": "var(--color-surface-container-low)",
+                        "inverse-primary": "var(--color-inverse-primary)",
+                        "tertiary-fixed": "#ede9fe",
+                        "on-secondary": "var(--color-on-secondary)"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "display": ["Plus Jakarta Sans"],
+                        "body": ["Plus Jakarta Sans"],
+                        "label": ["Plus Jakarta Sans"],
+                        "mono": ["JetBrains Mono", "monospace"]
+                    }
+                }
             }
-          }
         }
-      }
     </script>
 <style>
         body {
-            background-color: #e8eaf0;
-            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #0f172a; /* Override to force terminal dark mode requested */
         }
-        .neomorph-raised {
-            box-shadow: 6px 6px 12px rgba(0,0,0,0.08), -6px -6px 12px rgba(255,255,255,0.6);
+        .neomorphic-raised {
+            box-shadow: 6px 6px 12px rgba(0,0,0,0.3), -2px -2px 6px rgba(255,255,255,0.05);
         }
-        .neomorph-inset {
-            box-shadow: inset 4px 4px 8px rgba(0,0,0,0.06), inset -4px -4px 8px rgba(255,255,255,0.5);
+        .neomorphic-inset {
+            box-shadow: inset 4px 4px 8px rgba(0,0,0,0.4), inset -2px -2px 4px rgba(255,255,255,0.05);
         }
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        .terminal-glow {
+            text-shadow: 0 0 10px rgba(52, 211, 153, 0.5);
+        }
+        .grid-bg {
+            background-image: radial-gradient(circle at 2px 2px, rgba(52, 211, 153, 0.05) 1px, transparent 0);
+            background-size: 24px 24px;
         }
     </style>
 </head>
-<body class="bg-surface text-on-surface">
-<!-- TopAppBar -->
-<header class="bg-[#e8eaf0] docked full-width top-0 sticky z-50 px-6 py-4 shadow-[6px_6px_12px_rgba(0,0,0,0.08),-6px_-6px_12px_rgba(255,255,255,0.6)]">
-<div class="flex justify-between items-center max-w-7xl mx-auto w-full">
-<div class="text-xl font-semibold text-slate-800 tracking-tighter">
-                SecEngineer.io
-            </div>
-<nav class="hidden md:flex items-center gap-2 font-plus-jakarta text-sm font-medium tracking-tight">
-<a class="text-slate-600 hover:text-indigo-500 hover:shadow-[inset_4px_4px_8px_rgba(0,0,0,0.06),inset_-4px_-4px_8px_rgba(255,255,255,0.5)] transition-all duration-300 px-4 py-2 rounded-xl" href="/">Home</a>
-<a class="text-slate-600 hover:text-indigo-500 hover:shadow-[inset_4px_4px_8px_rgba(0,0,0,0.06),inset_-4px_-4px_8px_rgba(255,255,255,0.5)] transition-all duration-300 px-4 py-2 rounded-xl" href="/about.html">About</a>
-<a class="text-indigo-600 font-semibold shadow-[inset_4px_4px_8px_rgba(0,0,0,0.06),inset_-4px_-4px_8px_rgba(255,255,255,0.5)] px-4 py-2 rounded-xl" href="/projects.html">Projects</a>
-<a class="text-slate-600 hover:text-indigo-500 hover:shadow-[inset_4px_4px_8px_rgba(0,0,0,0.06),inset_-4px_-4px_8px_rgba(255,255,255,0.5)] transition-all duration-300 px-4 py-2 rounded-xl" href="/blog.html">Blog</a>
-<a class="text-slate-600 hover:text-indigo-500 hover:shadow-[inset_4px_4px_8px_rgba(0,0,0,0.06),inset_-4px_-4px_8px_rgba(255,255,255,0.5)] transition-all duration-300 px-4 py-2 rounded-xl" href="/contact.html">Contact</a>
+<body class="font-body text-on-surface-variant grid-bg min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="bg-slate-900 sticky top-0 z-50 shadow-[inset_0_-2px_4px_rgba(0,0,0,0.2)]">
+<nav class="flex justify-between items-center w-full px-6 py-4 max-w-screen-2xl mx-auto">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-emerald-500" data-icon="terminal">terminal</span>
+<span class="font-mono font-bold text-emerald-500 tracking-tighter text-lg">&gt; APPSEC_ENGINEER</span>
+</div>
+<div class="hidden md:flex items-center gap-2">
+<a class="font-mono text-sm text-slate-500 hover:text-emerald-400 px-3 py-1 transition-all" href="#">root</a>
+<a class="font-mono text-sm text-emerald-400 shadow-[inset_4px_4px_8px_rgba(0,0,0,0.3),inset_-4px_-4px_8px_rgba(255,255,255,0.05)] px-3 py-1 rounded-lg" href="#">bin/projects</a>
+<a class="font-mono text-sm text-slate-500 hover:text-emerald-400 px-3 py-1 transition-all" href="#">etc/skills</a>
+<a class="font-mono text-sm text-slate-500 hover:text-emerald-400 px-3 py-1 transition-all" href="#">usr/contact</a>
+</div>
+<div class="flex items-center gap-4">
+<button id="theme-toggle" class="p-2 rounded-xl neomorph-raised neomorphic-raised active:scale-95 transition-transform duration-200 text-indigo-600">
+<span class="material-symbols-outlined" data-icon="dark_mode">dark_mode</span>
+</button>
+<button class="material-symbols-outlined text-emerald-500 hover:scale-105 transition-transform" data-icon="lock_open">lock_open</button>
+<div class="h-8 w-8 rounded-full bg-slate-800 border border-emerald-500/20 flex items-center justify-center overflow-hidden">
+<span class="material-symbols-outlined text-emerald-500/50">person</span>
+</div>
+</div>
 </nav>
-<div class="flex items-center gap-4"><button class="w-10 h-10 flex items-center justify-center neomorph-raised rounded-xl text-indigo-600 active:scale-95 transition-transform duration-200" id="theme-toggle">
-<span class="material-symbols-outlined dark:hidden">dark_mode</span>
-<span class="material-symbols-outlined hidden dark:block">light_mode</span>
-</button>
-<button class="w-10 h-10 flex items-center justify-center neomorph-raised rounded-xl text-indigo-600 active:scale-95 transition-transform duration-200">
-<span class="material-symbols-outlined">shield_lock</span>
-</button>
-<button class="w-10 h-10 flex items-center justify-center neomorph-raised rounded-xl text-indigo-600 active:scale-95 transition-transform duration-200">
-<span class="material-symbols-outlined">terminal</span>
-</button>
-</div>
-</div>
 </header>
-<main class="max-w-7xl mx-auto px-6 pt-12 pb-32">
-<!-- Hero Intro -->
-<div class="mb-16 text-center">
-<h1 class="text-4xl md:text-5xl font-bold text-on-surface tracking-tight mb-4">Security Portfolio</h1>
-<p class="text-on-surface-variant max-w-2xl mx-auto text-lg">
-                Showcasing deep technical expertise in defensive and offensive security operations across distributed architectures.
-            </p>
+<main class="flex-grow max-w-screen-2xl mx-auto w-full px-6 py-12">
+<!-- Hero Section -->
+<section class="mb-20">
+<div class="flex flex-col md:flex-row gap-12 items-center">
+<div class="w-full md:w-1/2">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 mb-6">
+<span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+<span class="text-xs font-mono text-emerald-500 uppercase tracking-widest">System Status: Secure</span>
 </div>
-<!-- Projects Bento Grid -->
-<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
-<!-- Project Card 1: Large Featured -->
-<div class="md:col-span-8 neomorph-raised rounded-xl p-8 flex flex-col md:flex-row gap-8 bg-surface">
-<div class="md:w-1/2">
-<div class="neomorph-inset rounded-lg overflow-hidden aspect-video relative group">
-<img alt="Server room visualization" class="w-full h-full object-cover mix-blend-overlay opacity-80" data-alt="abstract close-up of server racks with blue and indigo glowing lights in a dark data center environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYcDtvHOYpwB6Jkw_3P5VpoLZ-Gil9fzbT2LHrgVVYj2ioDZBU1b5DSxjy8g-_OG3PiZAfu1Ddd5WGYRzah8WavU09T4svaH-FNV89BYoAE1cE6f43U1q7USkI6vXlqpf1VUagdagojPHLkEPPFAKz45vH47SzuowprvqTWdWk1KzqLQVjMzL1l_ERZXHFov0XmqBd_csphb_-WEydTGY7SugQn5Qmfl9NI1FpNfMWNNfMpzbV_Y2TfV7eE8aNBi_jwIMeFVDbsu1s"/>
-<div class="absolute inset-0 bg-primary/10"></div>
-</div>
-</div>
-<div class="md:w-1/2 flex flex-col justify-between">
-<div>
-<div class="flex items-center gap-2 mb-4">
-<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">cloud_done</span>
-<span class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Infrastructure</span>
-</div>
-<h3 class="text-2xl font-semibold text-on-surface mb-3">Cloud Infrastructure Hardening</h3>
-<p class="text-on-surface-variant text-sm leading-relaxed mb-6">
-                            Architected a Zero-Trust environment for a multi-region Kubernetes cluster, implementing strictly defined service mesh policies and automated IAM rotation.
-                        </p>
-</div>
-<button class="neomorph-raised px-6 py-3 rounded-xl text-primary font-semibold flex items-center justify-center gap-2 self-start active:neomorph-inset transition-all duration-200">
-                        Case Study <span class="material-symbols-outlined text-sm">arrow_forward</span>
-</button>
-</div>
-</div>
-<!-- Project Card 2: Medium -->
-<div class="md:col-span-4 neomorph-raised rounded-xl p-6 bg-surface flex flex-col">
-<div class="neomorph-inset rounded-lg p-4 mb-6 flex justify-center">
-<span class="material-symbols-outlined text-5xl text-tertiary" style="font-variation-settings: 'FILL' 1;">api</span>
-</div>
-<h3 class="text-xl font-semibold text-on-surface mb-2">API Vulnerability Assessment</h3>
-<p class="text-on-surface-variant text-sm mb-6 flex-grow">
-                    Full-scale penetration testing of RESTful endpoints, uncovering BOLA vulnerabilities and implementing JWT hardening.
-                </p>
-<button class="neomorph-raised w-full py-3 rounded-xl text-primary font-semibold active:neomorph-inset transition-all duration-200">
-                    Case Study
-                </button>
-</div>
-<!-- Project Card 3: Small Square -->
-<div class="md:col-span-4 neomorph-raised rounded-xl p-6 bg-surface flex flex-col">
-<div class="neomorph-inset w-12 h-12 rounded-xl flex items-center justify-center mb-6">
-<span class="material-symbols-outlined text-primary">security_update_good</span>
-</div>
-<h3 class="text-lg font-semibold text-on-surface mb-2">SecDevOps Pipeline</h3>
-<p class="text-on-surface-variant text-sm mb-6">
-                    Integrated SAST, DAST, and secret scanning into GitHub Actions.
-                </p>
-<button class="neomorph-raised px-4 py-2 rounded-lg text-primary text-sm font-semibold self-start active:neomorph-inset transition-all">
-                    View Repo
-                </button>
-</div>
-<!-- Project Card 4: Horizontal Wide -->
-<div class="md:col-span-8 neomorph-raised rounded-xl p-6 bg-surface flex items-center gap-6">
-<div class="hidden sm:block w-24 h-24 neomorph-inset rounded-full flex-shrink-0 flex items-center justify-center">
-<span class="material-symbols-outlined text-4xl text-on-surface-variant">fingerprint</span>
-</div>
-<div class="flex-grow">
-<h3 class="text-xl font-semibold text-on-surface mb-1">Identity &amp; Access Governance</h3>
-<p class="text-on-surface-variant text-sm mb-3">
-                        Deployment of enterprise-wide SSO with biometric MFA and conditional access.
+<h1 class="text-5xl md:text-6xl font-headline font-semibold text-white mb-6 leading-tight">
+                        Securing the <span class="text-emerald-400 terminal-glow">Infrastructure</span> of Tomorrow
+                    </h1>
+<p class="text-lg text-slate-400 mb-8 max-w-xl leading-relaxed">
+                        Specialized in building resilient security postures for cloud-native applications. From zero-trust architecture to automated vulnerability scanning, I bridge the gap between development and defense.
                     </p>
-<div class="flex gap-2">
-<span class="px-2 py-1 bg-surface-container rounded-md text-[10px] font-bold text-on-surface-variant">OKTA</span>
-<span class="px-2 py-1 bg-surface-container rounded-md text-[10px] font-bold text-on-surface-variant">SAML</span>
+<div class="flex gap-4">
+<button class="bg-emerald-500 text-slate-950 px-8 py-3 rounded-lg font-mono font-bold hover:bg-emerald-400 transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined" data-icon="shield">shield</span>
+                            INIT_AUDIT
+                        </button>
+<button class="neomorphic-raised bg-slate-900 text-emerald-400 px-8 py-3 rounded-lg font-mono hover:scale-105 transition-transform border border-emerald-500/10">
+                            VIEW_ARTIFACTS
+                        </button>
 </div>
 </div>
-<button class="neomorph-raised w-12 h-12 flex items-center justify-center rounded-full text-primary active:neomorph-inset flex-shrink-0">
-<span class="material-symbols-outlined">open_in_new</span>
+<div class="w-full md:w-1/2 relative">
+<div class="aspect-square rounded-2xl overflow-hidden neomorphic-raised relative group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A dark terminal-themed interface displayed on a high-end monitor in a dimly lit studio environment. The screen shows lines of glowing neon green code and security diagnostic charts. Surrounding the monitor are subtle tech peripherals like a mechanical keyboard and hardware security keys. The lighting is moody with deep shadows and soft green ambient glows, reflecting a sophisticated AppSec engineering aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuIsf4aKP4MY857v9hkkFOC4UlrqxnGSX-bJ3KE937CtPCVi2Ev1dvec2yVxyKuRo7xNFa0vHwHPBjLTWaPdgZT3zABYet7s6vB6UrX-OHGe0EokTShIFpEd2G9Zyyh7Ec12cCXoKqMe_0dYwI_vhfJEc3E43DBHsgSCm6ULRf_QwN3sbe5JJkJ-9FJrDW-dAQsZhjOPysU1bgWJRxDMvaul5YJgJlC1pzsQQvNKEdmTcZRdCeem_lS2S-qMKynU_GKa3UoXe7yIPa"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-60"></div>
+</div>
+<!-- Floating Stat Badge -->
+<div class="absolute -bottom-6 -left-6 bg-slate-900 p-6 rounded-xl neomorphic-raised border border-emerald-500/20 max-w-[200px]">
+<div class="text-emerald-500 font-mono text-2xl font-bold mb-1">2.4k+</div>
+<div class="text-xs text-slate-400 font-mono uppercase tracking-tighter">Vulnerabilities Patched</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Projects Bento Grid -->
+<section class="mb-20">
+<div class="flex items-end justify-between mb-12">
+<div>
+<h2 class="text-3xl font-headline font-semibold text-white mb-2">Project Artifacts</h2>
+<p class="text-slate-400 font-mono text-sm">/var/log/active_deployments</p>
+</div>
+<div class="hidden md:flex gap-2">
+<button class="neomorphic-inset bg-slate-900 p-2 rounded-lg text-emerald-500">
+<span class="material-symbols-outlined" data-icon="grid_view">grid_view</span>
+</button>
+<button class="neomorphic-raised bg-slate-900 p-2 rounded-lg text-slate-500">
+<span class="material-symbols-outlined" data-icon="list">list</span>
 </button>
 </div>
-<!-- Project Card 5: Small Square -->
-<div class="md:col-span-4 neomorph-raised rounded-xl p-6 bg-surface flex flex-col">
-<div class="neomorph-inset w-12 h-12 rounded-xl flex items-center justify-center mb-6">
-<span class="material-symbols-outlined text-tertiary">policy</span>
 </div>
-<h3 class="text-lg font-semibold text-on-surface mb-2">Compliance Automation</h3>
-<p class="text-on-surface-variant text-sm mb-6">
-                    Automated SOC2 audit evidence collection using serverless functions.
-                </p>
-<button class="neomorph-raised px-4 py-2 rounded-lg text-primary text-sm font-semibold self-start active:neomorph-inset transition-all">
-                    Case Study
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Large Card: Cloud Infrastructure Hardening -->
+<div class="md:col-span-8 group relative bg-slate-900 rounded-2xl overflow-hidden neomorphic-raised border border-emerald-500/10 transition-all hover:-translate-y-1">
+<div class="h-64 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A cinematic, detailed view of a server room corridor with endless rows of cooling fans and blinking blue and green LEDs. The perspective is low, looking down a narrow aisle between server racks. The air is misty, suggesting a high-performance environment. The lighting is neon and futuristic, focusing on the intricate textures of wires and hardware components in a secure data center." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxNNVUonQ-lYn8NQsF4S8WywaEPSm6EWfl6JnG6hxsNvMeL6dSYLWsgCRAgdQRYw7Bbz2WTvcXxjHyRXux3JefJEGsRdrfjx0kLTY2DrVZuUutCkn2MBPURxJCkuDozaYwFmOVJ8W8L4Vn8t2NdptV-YQO_Ygj5m2uJk7896711vLGj7sf8jdsGhzSDHioT6fKIBSY_o9mqHPTDcTHGaDLJgaGOKgqhLbj22VKDKPehS52Pe5WRpVRbIvOJ8Wf5BJ7Nr0x8-zyLmjy"/>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-start mb-4">
+<h3 class="text-2xl font-headline font-semibold text-white">Cloud Infrastructure Hardening</h3>
+<span class="bg-emerald-500/10 text-emerald-400 px-3 py-1 rounded-full text-xs font-mono border border-emerald-500/20">AWS / K8S</span>
+</div>
+<p class="text-slate-400 mb-6 leading-relaxed">Implementing zero-trust networking and automated IAM policy enforcement across 400+ microservices in a multi-region production environment.</p>
+<div class="grid grid-cols-3 gap-4 mb-8">
+<div class="neomorphic-inset p-4 rounded-xl bg-slate-900/50">
+<div class="text-emerald-400 font-mono text-xl font-bold">98%</div>
+<div class="text-[10px] text-slate-500 uppercase tracking-widest font-mono">Audit Score</div>
+</div>
+<div class="neomorphic-inset p-4 rounded-xl bg-slate-900/50">
+<div class="text-emerald-400 font-mono text-xl font-bold">0.4s</div>
+<div class="text-[10px] text-slate-500 uppercase tracking-widest font-mono">Latency Impact</div>
+</div>
+<div class="neomorphic-inset p-4 rounded-xl bg-slate-900/50">
+<div class="text-emerald-400 font-mono text-xl font-bold">L3/L4</div>
+<div class="text-[10px] text-slate-500 uppercase tracking-widest font-mono">DDoS Filter</div>
+</div>
+</div>
+<a class="inline-flex items-center gap-2 font-mono text-emerald-500 hover:text-emerald-400 transition-colors" href="#">
+<span>$ cat case_study.md</span>
+<span class="material-symbols-outlined text-sm" data-icon="open_in_new">open_in_new</span>
+</a>
+</div>
+</div>
+<!-- Side Card: API Vulnerability Assessment -->
+<div class="md:col-span-4 bg-slate-900 rounded-2xl overflow-hidden neomorphic-raised border border-emerald-500/10 group transition-all hover:-translate-y-1">
+<div class="h-48 overflow-hidden">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="A complex digital visualization of data streams and API calls represented as glowing geometric patterns and connecting lines in a dark space. The aesthetic is clean and high-tech, using shades of deep purple and emerald green. Icons of locks and security shields are integrated into the network graph, symbolizing a robust and monitored API gateway environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAB57O843fqvtt8kjRge4Hkefh-J3-_Q5-JkJVLlB_FrzVEQxsdUlChvegyu-e8--jnUk_1u5jVXe4mNrIlRLJThvuMAhznxR0pitAMgQJqgBtETOg65botzR7LEbkRlRoMic4rbIPwDk29p2MT_LLl2DqTHp-6WaldM78sk5abofncpgnbFYIENaK-VuDtERvY4l7QidYGXJIW9XR3XXFdPaAmM4gYTorHEYy4fv979lKkEAWo4wiIeeKFq9lhpO-dN1pHyOMEglLL"/>
+</div>
+<div class="p-6">
+<div class="mb-4">
+<h3 class="text-xl font-headline font-semibold text-white mb-1">API Vulnerability Assessment</h3>
+<p class="text-xs font-mono text-emerald-500/60 uppercase tracking-widest">OWASP Top 10 focus</p>
+</div>
+<p class="text-sm text-slate-400 mb-6">Comprehensive automated scanning and manual penetration testing for GraphQL and REST endpoints.</p>
+<div class="flex items-center justify-between mb-6">
+<div class="flex -space-x-2">
+<div class="w-8 h-8 rounded-full bg-slate-800 border-2 border-slate-900 flex items-center justify-center text-[10px] text-emerald-500 font-mono">TS</div>
+<div class="w-8 h-8 rounded-full bg-slate-800 border-2 border-slate-900 flex items-center justify-center text-[10px] text-emerald-500 font-mono">PY</div>
+<div class="w-8 h-8 rounded-full bg-slate-800 border-2 border-slate-900 flex items-center justify-center text-[10px] text-emerald-500 font-mono">JS</div>
+</div>
+<span class="text-xs font-mono text-slate-500">324 Endpoints Scanned</span>
+</div>
+<button class="w-full neomorphic-raised bg-slate-900 py-3 rounded-lg text-emerald-500 font-mono text-xs hover:text-emerald-400 transition-colors border border-emerald-500/5">
+                            ./run_diagnostic.sh
+                        </button>
+</div>
+</div>
+<!-- Bottom Left: SecDevOps Pipeline -->
+<div class="md:col-span-6 bg-slate-900 rounded-2xl p-8 neomorphic-raised border border-emerald-500/10 transition-all hover:-translate-y-1 group">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center border border-emerald-500/20 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-emerald-500" data-icon="sync_alt">sync_alt</span>
+</div>
+<div>
+<h3 class="text-xl font-headline font-semibold text-white">SecDevOps Pipeline</h3>
+<p class="text-xs font-mono text-emerald-500/60 uppercase">CI/CD Integration</p>
+</div>
+</div>
+<p class="text-slate-400 mb-8">Integrated SAST, DAST, and secret detection tools directly into GitHub Actions and GitLab CI, reducing time-to-remediate by 65%.</p>
+<div class="space-y-3 mb-8">
+<div class="flex justify-between items-center text-xs font-mono">
+<span class="text-slate-500">Pipeline Integrity</span>
+<span class="text-emerald-400">100.0%</span>
+</div>
+<div class="w-full bg-slate-800 h-1 rounded-full overflow-hidden">
+<div class="bg-emerald-500 h-full w-full"></div>
+</div>
+</div>
+<a class="inline-flex items-center gap-2 font-mono text-emerald-500 text-sm" href="#">
+<span>$ git log --oneline</span>
+<span class="material-symbols-outlined text-sm" data-icon="terminal">terminal</span>
+</a>
+</div>
+<!-- Bottom Right: Enterprise Threat Modeling -->
+<div class="md:col-span-6 bg-slate-900 rounded-2xl overflow-hidden neomorphic-raised border border-emerald-500/10 flex transition-all hover:-translate-y-1 group">
+<div class="flex-grow p-8">
+<h3 class="text-xl font-headline font-semibold text-white mb-2">Enterprise Threat Modeling</h3>
+<p class="text-sm text-slate-400 mb-6">Strategic vulnerability analysis for Fortune 500 financial platforms using STRIDE methodology.</p>
+<div class="flex gap-4">
+<div class="flex flex-col">
+<span class="text-emerald-400 font-mono text-lg font-bold">142</span>
+<span class="text-[10px] text-slate-500 uppercase font-mono">Threats Identified</span>
+</div>
+<div class="w-px h-10 bg-slate-800 self-center"></div>
+<div class="flex flex-col">
+<span class="text-emerald-400 font-mono text-lg font-bold">STRIDE</span>
+<span class="text-[10px] text-slate-500 uppercase font-mono">Methodology</span>
+</div>
+</div>
+</div>
+<div class="w-1/3 relative overflow-hidden hidden sm:block">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A high-concept abstract visualization of security architecture. It features interlocking crystalline structures and layers of digital 'armor' protecting a central glowing core. The colors transition from deep midnight blue to sharp emerald highlights. The style is sharp, clean, and professional, conveying the concept of enterprise-grade security and threat modeling through sophisticated 3D geometry." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBz847xNIPPnOQBFe6Nw48EOSeJi-lbAw55Jo9FCqtEQxJjPqz37V-jn2Pps5vElt_Ir8V7v4k1E7aKdsP5gZavrxGeSVGyU-Ih-lviioxmcdtmTXgDjqJoii-xm06iQ_oe0bo3bmlsU5YaNO6a3rBSl0OUm0YY-7_QHJkGEIsFQLVeldlFTxcABPophFGfrvqLKP_qTkJWR_PuWwCX2fdZScvenVKzZmmAtEDxAhXTsaox6muBYfJP79OchPLO1ClEB_jZF9VUjyMO"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter / Contact CTA -->
+<section class="max-w-4xl mx-auto text-center mb-20 bg-slate-900 p-12 rounded-3xl neomorphic-raised border border-emerald-500/10">
+<h2 class="text-3xl font-headline font-semibold text-white mb-4">Request a Security Consultation</h2>
+<p class="text-slate-400 mb-8 font-mono">Ready to harden your application stack? Secure your infrastructure today.</p>
+<form class="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
+<div class="flex-grow">
+<input class="w-full bg-slate-950 border-none rounded-xl neomorphic-inset text-emerald-500 font-mono focus:ring-1 focus:ring-emerald-500 placeholder:text-slate-700 p-4" placeholder="root@domain.com" type="email"/>
+</div>
+<button class="bg-emerald-500 text-slate-950 px-8 py-4 rounded-xl font-mono font-bold hover:bg-emerald-400 transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined" data-icon="send">send</span>
+                    EXEC
                 </button>
-</div>
-<!-- Project Card 6: Small Square -->
-<div class="md:col-span-4 neomorph-raised rounded-xl p-6 bg-surface flex flex-col">
-<div class="neomorph-inset w-12 h-12 rounded-xl flex items-center justify-center mb-6">
-<span class="material-symbols-outlined text-primary">bug_report</span>
-</div>
-<h3 class="text-lg font-semibold text-on-surface mb-2">Threat Modeling</h3>
-<p class="text-on-surface-variant text-sm mb-6">
-                    STRIDE-based analysis for decentralized finance (DeFi) protocols.
-                </p>
-<button class="neomorph-raised px-4 py-2 rounded-lg text-primary text-sm font-semibold self-start active:neomorph-inset transition-all">
-                    Case Study
-                </button>
-</div>
-<!-- Project Card 7: Small Square -->
-<div class="md:col-span-4 neomorph-raised rounded-xl p-6 bg-surface flex flex-col">
-<div class="neomorph-inset w-12 h-12 rounded-xl flex items-center justify-center mb-6">
-<span class="material-symbols-outlined text-on-surface">monitoring</span>
-</div>
-<h3 class="text-lg font-semibold text-on-surface mb-2">SIEM Orchestration</h3>
-<p class="text-on-surface-variant text-sm mb-6">
-                    Custom SOAR playbooks for automated ransomware containment.
-                </p>
-<button class="neomorph-raised px-4 py-2 rounded-lg text-primary text-sm font-semibold self-start active:neomorph-inset transition-all">
-                    Case Study
-                </button>
-</div>
-</div>
+</form>
+</section>
 </main>
-<!-- BottomNavBar (Mobile Only) -->
-<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-3 bg-[#e8eaf0] z-50 rounded-t-[32px] shadow-[0_-8px_16px_rgba(0,0,0,0.05)]">
-<div class="flex flex-col items-center justify-center text-slate-500 w-16 h-16 hover:text-indigo-500">
-<span class="material-symbols-outlined">home</span>
-<span class="font-plus-jakarta text-[10px] font-medium">Home</span>
+<!-- Footer -->
+<footer class="bg-slate-950 border-t border-emerald-900/30">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-8 py-12 gap-8 max-w-screen-2xl mx-auto">
+<div class="flex flex-col items-center md:items-start gap-4">
+<div class="font-black text-emerald-600 font-mono text-xl tracking-tighter">&gt; TERMINAL_AUTH</div>
+<p class="font-mono text-[10px] uppercase tracking-widest text-slate-400">© 2024 TERMINAL_AUTH // ENCRYPTED_CONNECTION</p>
 </div>
-<div class="flex flex-col items-center justify-center text-slate-500 w-16 h-16 hover:text-indigo-500">
-<span class="material-symbols-outlined">person_search</span>
-<span class="font-plus-jakarta text-[10px] font-medium">About</span>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="font-mono text-[10px] uppercase tracking-widest text-emerald-900 hover:text-emerald-300 transition-colors flex items-center gap-2 group" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="verified">verified</span>
+                    OSCP_CERTIFIED
+                </a>
+<a class="font-mono text-[10px] uppercase tracking-widest text-emerald-900 hover:text-emerald-300 transition-colors flex items-center gap-2 group" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="workspace_premium">workspace_premium</span>
+                    CISSP_VALID
+                </a>
+<a class="font-mono text-[10px] uppercase tracking-widest text-emerald-900 hover:text-emerald-300 transition-colors flex items-center gap-2 group" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="bug_report">bug_report</span>
+                    BUG_BOUNTY_REPORTS
+                </a>
 </div>
-<div class="flex flex-col items-center justify-center text-indigo-600 shadow-[inset_4px_4px_8px_rgba(0,0,0,0.06),inset_-4px_-4px_8px_rgba(255,255,255,0.5)] rounded-2xl w-16 h-16">
-<span class="material-symbols-outlined">shield</span>
-<span class="font-plus-jakarta text-[10px] font-medium">Work</span>
+<div class="flex gap-4">
+<button class="w-10 h-10 rounded-full bg-slate-900 neomorphic-raised flex items-center justify-center text-emerald-500 hover:scale-110 transition-transform">
+<span class="material-symbols-outlined" data-icon="code">code</span>
+</button>
+<button class="w-10 h-10 rounded-full bg-slate-900 neomorphic-raised flex items-center justify-center text-emerald-500 hover:scale-110 transition-transform">
+<span class="material-symbols-outlined" data-icon="security">security</span>
+</button>
 </div>
-<div class="flex flex-col items-center justify-center text-slate-500 w-16 h-16 hover:text-indigo-500">
-<span class="material-symbols-outlined">history_edu</span>
-<span class="font-plus-jakarta text-[10px] font-medium">Insights</span>
 </div>
-<div class="flex flex-col items-center justify-center text-slate-500 w-16 h-16 hover:text-indigo-500">
-<span class="material-symbols-outlined">alternate_email</span>
-<span class="font-plus-jakarta text-[10px] font-medium">Contact</span>
-</div>
-</nav>
-<script>
-  const themeToggle = document.getElementById('theme-toggle');
-  const htmlElement = document.documentElement;
-
-  themeToggle.addEventListener('click', () => {
-    if (htmlElement.classList.contains('dark')) {
-      htmlElement.classList.remove('dark');
-      localStorage.setItem('theme', 'light');
-    } else {
-      htmlElement.classList.add('dark');
-      localStorage.setItem('theme', 'dark');
-    }
-  });
-
-  // Check for saved theme preference
-  if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-    htmlElement.classList.add('dark');
-  } else {
-    htmlElement.classList.remove('dark');
-  }
-</script><script type="module" src="/main.js"></script>
+</footer>
+<script type="module" src="/main.js"></script>
 </body></html>
